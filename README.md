@@ -11,7 +11,7 @@ Projeto que cria uma carteira com lançamento de contas a pagar e receber, além
 ## Tech
 
 
-
+![alt text](componente.jpeg)
 ## License
 
 MIT
