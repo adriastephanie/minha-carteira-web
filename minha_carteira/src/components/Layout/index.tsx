@@ -4,13 +4,19 @@ import MainHeader from "../MainHeader";
 import Aside from "../Aside";
 import Content from "../Content";
 
-const Layout: React.FC = () => {
+interface LayoutProps {
+    children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <>
         <Container> 
             <MainHeader/>
             <Aside/>
-            <Content/>
+            <Content>
+                {children}
+            </Content>
         </Container>
        </>
     )
