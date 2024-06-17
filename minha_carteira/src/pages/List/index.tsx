@@ -16,18 +16,18 @@ const Lista: React.FC = () => {
                 <SelectInput options={options}/>
             </ContentHeader> 
             <Content>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard cardColor={"#313862"} tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
             </Content>
         </Container>
     )
