@@ -1,5 +1,5 @@
 {
-  "homepage": "http://adriastephanie.github.io/minha-carteira-web",
+  "homepage": "https://adriastephanie.github.io/minha-carteira-web",
   "name": "minha_carteira",
   "version": "0.1.0",
   "private": true,
@@ -21,10 +21,11 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
