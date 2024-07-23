@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './minha_carteira/package-lock.json'
+        cache-dependency-path: '/home/runner/work/minha-carteira-web/minha-carteira-web/package.json'
 
     - run: echo "Hello World!"
     - run: npm i
