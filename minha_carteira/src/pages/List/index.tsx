@@ -1,9 +1,13 @@
-import React, {useMemo} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import { Container, Content, Filters } from "./styles";
 import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/SelectInput";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import { useParams } from 'react-router-dom';
+import gains from "../../repositories/gains"; //entrada
+import expenses from "../../repositories/expenses"; //saida
+import formatCurrency from "../../utils/formatCurrency"; //formatar moeda
+import formatDate from "../../utils/formatDate"; //formatar data
 
 interface IRouteParams{
     match: {
@@ -13,7 +17,19 @@ interface IRouteParams{
     }
 }
 
+interface IData{
+    id: string;
+    description: string;
+    amountFormatted: string;
+    frequency: string;
+    dateFormatted: string;
+    tagColor: string;
+}
+
 const Lista: React.FC<IRouteParams> = ({match}) => {
+    const [data, setData] = useState<IData[]>([]);
+    const [monthSelected, setMonthSelected] = useState<string>('');
+    const [yearSelected, setYearSelected] = useState<string>('');
     const { type } = match.params;
     const title = useMemo(() => {
         return type === 'entry-balance'  ? {
@@ -25,6 +41,11 @@ const Lista: React.FC<IRouteParams> = ({match}) => {
         }
 
     }, [type]);
+
+    const listData = useMemo(() => {
+        return type === 'entry-balance' ? gains : expenses;
+
+    },[type])
 
     const months = [
         { value: 1, label: 'Janeiro'},
@@ -51,6 +72,21 @@ const Lista: React.FC<IRouteParams> = ({match}) => {
         { value: 2029, label: 2029},
      ]
  
+    useEffect(() =>{
+        const response = listData.map(item => {
+            return {
+                id: String(Math.random() * data.length),
+                description: item.description,
+                amountFormatted: formatCurrency(Number(item.amount)),
+                frequency: item.frequency,
+                dateFormatted: formatDate(item.date),
+                tagColor: item.frequency === 'recorrente' ? '#4E41F0' : '#E44C4E'
+
+            }
+        })
+        setData(response);
+        
+}, []);
     return (
         <Container>
              <ContentHeader title={title.title} lineColor={title.lineColor}>
@@ -75,18 +111,12 @@ const Lista: React.FC<IRouteParams> = ({match}) => {
             </Filters>
 
             <Content>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de agua"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de luz"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de aluguel"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de telefone"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
-                <HistoryFinanceCard tagColor={"#E44"} title={"conta de condominio"} subTitle={"27/01/2024"} amount={"R$ 139,00"}/>
+                {
+                    data.map(item => (
+                        <HistoryFinanceCard key={item.id} tagColor={item.tagColor} title={item.description} subTitle={item.dateFormatted} amount={item.amountFormatted}/>
+                    ))
+
+                }
             </Content>
         </Container>
     )
