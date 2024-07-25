@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import SelectInput from '.';// ajuste o caminho conforme necessário
 import '@testing-library/jest-dom/extend-expect';
-import SelectInput from '.';
 
 describe('SelectInput Component', () => {
     it('should render options correctly', () => {

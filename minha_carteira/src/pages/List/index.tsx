@@ -28,6 +28,8 @@ interface IData{
 
 const Lista: React.FC<IRouteParams> = ({match}) => {
     const [data, setData] = useState<IData[]>([]);
+    const [monthSelected, setMonthSelected] = useState<string>('');
+    const [yearSelected, setYearSelected] = useState<string>('');
     const { type } = match.params;
     const title = useMemo(() => {
         return type === 'entry-balance'  ? {
