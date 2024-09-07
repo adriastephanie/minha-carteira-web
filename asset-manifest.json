@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/minha-carteira-web/static/js/main.0d534e8e.js",
+    "static/media/logo.svg": "/minha-carteira-web/static/media/logo.3fc9096de52b68fe908da638e76f4793.svg",
+    "index.html": "/minha-carteira-web/index.html",
+    "main.0d534e8e.js.map": "/minha-carteira-web/static/js/main.0d534e8e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.0d534e8e.js"
+  ]
+}
