@@ -10,7 +10,7 @@ const Aside: React.FC = () => {
         <Container>
             <Header>
                 <LogImg src={logoImg} alt="logomarca minha carteira" />
-                <Title>Minha carteira</Title>
+                <Title id="minha-carteira-title">Minha carteira</Title>
             </Header> 
             <MenuContainer>
                 <MenuItemLink href="/dashboard">
