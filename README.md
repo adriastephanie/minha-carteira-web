@@ -10,10 +10,21 @@ Projeto que cria uma carteira com lançamento de contas a pagar e receber, além
 
 ## Tech
 
+## Installation
+
+Use the package npm [pip](https://docs.npmjs.com/cli/v10/commands/npm-install) to install project
+
+```bash
+Clone the repository, install the necessary dependencies, and then run the application.
+
+git clone https://github.com/repo
+npm install
+npm start
+```
+
 
 ## Project
 
-## Estrutura do Projeto
 ```bash
 ├── src/                # Código-fonte do projeto
 │   ├── asserts/        # Logo imagem
@@ -23,7 +34,6 @@ Projeto que cria uma carteira com lançamento de contas a pagar e receber, além
 │   ├── styles/         # Estilos dos páginas (global)
 │   └── utils/          # Funções utilitárias
 ├── tests/              # Testes automatizados
-├── docs/               # Documentação adicional
 ├── README.md           # Documentação principal
 └── package.json        # Dependências e scripts do projeto
 
